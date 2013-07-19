@@ -1,0 +1,13 @@
+"simplecov results template
+let s:generatedTime = <%= Time.now.to_i %>
+let s:coverageResults = {
+<% results.each_pair do |file, coverage|
+  %>\'<%= file %>': {
+\  'hits': <%= coverage[:hits].inspect %>,
+\  'misses': <%= coverage[:misses].inspect%>,
+\  'ignored': <%= coverage[:ignored].inspect%>
+\  },
+<% end%>
+\}
+call AddSimplecovResults(expand("<sfile>:p"), s:coverageResults)
+"end template

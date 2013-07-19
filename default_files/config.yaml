@@ -1,0 +1,9 @@
+---
+verbose: true
+quickfix:
+  output_path: errors.err
+  backtrace_pattern: '.*\.rb'
+  backtrace_limit: -1
+  include_pending: false
+simplecov:
+  output_path: coverage/coverage.vim

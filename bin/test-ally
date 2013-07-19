@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# vim: set ft=ruby :
+require 'test-ally/command-line'
+
+TestAlly::CommandLine.start
