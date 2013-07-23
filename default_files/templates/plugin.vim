@@ -1,4 +1,4 @@
-""" Test Ally Vim plugin
+""" Cadre Vim plugin
 "hi  HitLine     ctermbg=Cyan     guibg=Cyan
 "hi  MissLine    ctermbg=Magenta  guibg=Magenta
 "hi  IgnoreLine  ctermbg=Black    guibg=Black

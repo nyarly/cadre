@@ -1,4 +1,4 @@
-module TestAlly
+module Cadre
   module Growl
     #XXXX This isn't going to work at all as is. Lifted from other code, as
     #hints toward a working adapter

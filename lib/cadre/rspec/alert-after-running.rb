@@ -1,19 +1,19 @@
-require 'test-ally/libnotify/notifier'
+require 'cadre/libnotify/notifier'
 
 rspec_pid = Process.pid
 at_exit do
   if Process.pid == rspec_pid and not($!.nil? or $!.is_a?(SystemExit))
     message =  "Exception:\n#{$!.inspect}\n#{Dir.pwd}"
-    TestAlly::Libnotify::Notifier.new do |notifier|
+    Cadre::Libnotify::Notifier.new do |notifier|
       notifier.summary = "Spec run exited unexpectedly"
       notifier.message = message
       notifier.expire_time = 5000
-      notifier.sound = "error.ogg"
+      notifier.sound = "error"
     end.go
   end
 end
 
-module TestAlly
+module Cadre
   module RSpec
     class LibnotifyFormatter < ::RSpec::Core::Formatters::BaseFormatter
       def notify_message(duration, example_count, failure_count, pending_count)
@@ -26,14 +26,14 @@ module TestAlly
           notifier.transient = true
           notifier.summary = "Finished spec run"
           notifier.message = notify_message(duration, example_count, failure_count, pending_count)
-          notifier.sound = "failure.wav" if failure_count > 0
+          notifier.sound = "failure" if failure_count > 0
         else
           notifier.summary = "Finished long spec run"
           notifier.message = notify_message(duration, example_count, failure_count, pending_count)
           if failure_count > 0
-            notifier.sound = "failure.wav"
+            notifier.sound = "failure"
           else
-            notifier.sound = "success.ogg"
+            notifier.sound = "success"
           end
         end
         notifier.go

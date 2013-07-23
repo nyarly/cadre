@@ -1,9 +1,9 @@
-require 'test-ally/simplecov/vim-formatter'
+require 'cadre/simplecov/vim-formatter'
 
 #SimpleCov.start 'rails' do #if, you know: Rails.
 SimpleCov.start do
   formatter SimpleCov::Formatter::MultiFormatter[
     SimpleCov::Formatter::HTMLFormatter,
-    TestAlly::SimpleCov::VimFormatter
+    Cadre::SimpleCov::VimFormatter
   ]
 end

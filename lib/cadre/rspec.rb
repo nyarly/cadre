@@ -1,3 +1,3 @@
-require 'test-ally/rspec/alert-after-running'
-require 'test-ally/rspec/quickfix'
-require 'test-ally/rspec/true-feelings'
+require 'cadre/rspec/alert-after-running'
+require 'cadre/rspec/quickfix'
+require 'cadre/rspec/true-feelings'

@@ -1,4 +1,4 @@
-module TestAlly
+module Cadre
   class Config
     def initialize(valise, component)
       @valise = valise

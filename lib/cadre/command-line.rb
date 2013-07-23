@@ -1,7 +1,7 @@
 require 'thor'
-require 'test-ally/valise'
+require 'cadre/valise'
 
-module TestAlly
+module Cadre
   class CommandLine < Thor
     desc "how_to", "Short guide on usage"
     def how_to
@@ -11,7 +11,7 @@ module TestAlly
       metrics with editors and notifications.
 
       Try:
-      #{command_name} vim_plugin > ~/.vim/plugin/test_ally.vim
+      #{command_name} vim_plugin > ~/.vim/plugin/cadre.vim
       #{command_name} rspec_config >> .rspec
       #{command_name} simplecov_config >> .simplecov
 

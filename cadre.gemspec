@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name		= "test-ally"
+  spec.name		= "cadre"
   spec.version		= "0.0.1"
   author_list = {
     "Judson Lester" => 'nyarly@gmail.com'
@@ -23,16 +23,16 @@ Gem::Specification.new do |spec|
   # !!find default_files lib bin doc spec spec_help -not -regex '.*\.sw.' -type
     # f 2>/dev/null
   spec.files		= %w[
-    lib/test-ally/libnotify/notifier.rb
-    lib/test-ally/growl/notifier.rb
-    lib/test-ally/rspec/quickfix.rb
-    lib/test-ally/rspec/true-feelings.rb
-    lib/test-ally/rspec/alert-after-running.rb
-    lib/test-ally/config.rb
-    lib/test-ally/command-line.rb
-    lib/test-ally/valise.rb
-    lib/test-ally/simplecov/vim-formatter.rb
-    bin/test-ally
+    lib/cadre/libnotify/notifier.rb
+    lib/cadre/growl/notifier.rb
+    lib/cadre/rspec/quickfix.rb
+    lib/cadre/rspec/true-feelings.rb
+    lib/cadre/rspec/alert-after-running.rb
+    lib/cadre/config.rb
+    lib/cadre/command-line.rb
+    lib/cadre/valise.rb
+    lib/cadre/simplecov/vim-formatter.rb
+    bin/cadre
     default_files/config.yaml
     default_files/templates/simplecov-config
     default_files/templates/plugin.vim
@@ -46,7 +46,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib/]
   spec.rubygems_version = "1.3.5"
 
-  spec.executables = %w{test-ally}
+  spec.executables = %w{cadre}
 
   spec.has_rdoc		= true
   spec.extra_rdoc_files = Dir.glob("doc/**/*")

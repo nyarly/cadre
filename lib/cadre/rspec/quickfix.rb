@@ -1,9 +1,9 @@
 # !!! Lifted wholesale from
 # https://wincent.com/blog/running-rspec-specs-from-inside-vim
 require 'rspec/core/formatters/base_text_formatter'
-require 'test-ally/config'
+require 'cadre/config'
 
-module TestAlly
+module Cadre
   module RSpec
     class QuickfixFormatter < ::RSpec::Core::Formatters::BaseTextFormatter
 

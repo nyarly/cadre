@@ -6,4 +6,4 @@ quickfix:
   backtrace_limit: -1
   include_pending: false
 simplecov:
-  output_path: coverage/coverage.vim
+  output_path: .cadre/coverage.vim

@@ -1,6 +1,6 @@
-require 'test-ally/valise'
+require 'cadre/valise'
 
-module TestAlly
+module Cadre
   module Libnotify
     class Notifier
       def initialize

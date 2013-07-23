@@ -1,7 +1,8 @@
-require 'test-ally/config'
-require 'test-ally/valise'
+require 'cadre/config'
+require 'cadre/valise'
+require 'fileutils'
 
-module TestAlly
+module Cadre
   module SimpleCov
     class VimFormatter
       class << self
@@ -57,6 +58,7 @@ module TestAlly
       end
 
       def write_file(template_name, output_filename, bound)
+        FileUtils::mkdir_p(File::dirname(output_filename))
         content = templates.find(template_name).contents.render(bound)
         File.open( output_filename, "w" ) do |file_result|
           file_result.write content
