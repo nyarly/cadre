@@ -1,3 +1,4 @@
 .bundle/
 *.sw?
 corundum/
+pkg/
