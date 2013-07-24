@@ -12,7 +12,7 @@ module Cadre
 
       Try:
       #{command_name} vim_plugin > ~/.vim/plugin/cadre.vim
-      #{command_name} rspec_config >> .rspec
+      #{command_name} rspec_config >> spec/spec_helper.rb
       #{command_name} simplecov_config >> .simplecov
 
       Yeah, that's three commands, and you have to do the redirects yourself,

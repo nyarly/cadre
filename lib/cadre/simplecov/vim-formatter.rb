@@ -1,5 +1,3 @@
-require 'cadre/config'
-require 'cadre/valise'
 require 'fileutils'
 
 module Cadre
@@ -8,18 +6,15 @@ module Cadre
       class << self
         attr_accessor :options
       end
-      @options = {verbose: false, output_path: "coverage.vim"}
 
-      # call with VimFormatter.with_options(...) to get a VimFormatter class
-      def self.with_options(options)
-        merged_options = self.options.merge(options)
-        return Class.new(self) { @options = merged_options }
+      def options
+        @options ||=
+          begin
+            require 'cadre/config'
+            require 'cadre/valise'
+            Config.new(Valise, "simplecov")
+          end
       end
-
-      def initialize
-        @options = Config.new(Valise, "simplecov")
-      end
-      attr_reader :options
 
       Scope = Struct.new(:results)
 
@@ -48,6 +43,7 @@ module Cadre
       end
 
       def common_directory(files)
+        return "" if files.empty?
         File::join(files.map{|file| file.split(File::Separator)}.inject do |dir, path|
           dir.zip(path).take_while{|l,r| l == r}.map{|l,_| l}
         end)

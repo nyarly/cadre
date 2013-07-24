@@ -15,7 +15,7 @@ end
 
 module Cadre
   module RSpec
-    class LibnotifyFormatter < ::RSpec::Core::Formatters::BaseFormatter
+    class NotifyOnCompleteFormatter < ::RSpec::Core::Formatters::BaseFormatter
       def notify_message(duration, example_count, failure_count, pending_count)
         "Total duration: #{duration}\n Total: #{example_count}\n Failed: #{failure_count}\n Pending: #{pending_count}\n\nFinished at #{Time.now}"
       end

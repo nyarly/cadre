@@ -1,4 +1,4 @@
-require 'cadre/simplecov/vim-formatter'
+require 'cadre/simplecov'
 
 #SimpleCov.start 'rails' do #if, you know: Rails.
 SimpleCov.start do

@@ -20,25 +20,30 @@ Gem::Specification.new do |spec|
   spec.required_rubygems_version = Gem::Requirement.new(">= 0") if spec.respond_to? :required_rubygems_version=
 
   # Do this: y$@"
-  # !!find default_files lib bin doc spec spec_help -not -regex '.*\.sw.' -type
-    # f 2>/dev/null
+  # !!find default_files lib bin doc spec spec_help -not -regex '.*\.sw.' -type f 2>/dev/null
   spec.files		= %w[
+    default_files/config.yaml
+    default_files/sounds/error
+    default_files/sounds/failure
+    default_files/sounds/success
+    default_files/templates/plugin.vim
+    default_files/templates/coverage-results.vim.erb
+    default_files/templates/simplecov-config
+    default_files/templates/rspec-config
     lib/cadre/libnotify/notifier.rb
     lib/cadre/growl/notifier.rb
+    lib/cadre/rspec.rb
     lib/cadre/rspec/quickfix.rb
+    lib/cadre/rspec/notify-on-complete-formatter.rb
     lib/cadre/rspec/true-feelings.rb
-    lib/cadre/rspec/alert-after-running.rb
     lib/cadre/config.rb
     lib/cadre/command-line.rb
     lib/cadre/valise.rb
     lib/cadre/simplecov/vim-formatter.rb
+    lib/cadre/simplecov.rb
     bin/cadre
-    default_files/config.yaml
-    default_files/templates/simplecov-config
-    default_files/templates/plugin.vim
-    default_files/templates/coverage-results.vim.erb
-    default_files/templates/rspec-config
     spec/simplecov/formatter.rb
+    spec_help/gem_test_suite.rb
   ]
 
   spec.test_file        = "spec_help/gem_test_suite.rb"
