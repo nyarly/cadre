@@ -16,3 +16,21 @@ This thing has atrocious tests. As in: none at all. The way RSpec and Simplecov
 set up their plugins, plus the interaction with the filesystem make it
 particularly challenging. Normally I wouldn't release software like this, but
 I'm finding it useful in daily work.
+
+=== New ideas
+
+The basic requirements to add a feature to Cadre is that:
+
+* useful to developers - this is the fuzziest requirement. All the Cadre tools
+  started from the thought "wouldn't it be cool if..."
+
+* at least two existing tools are involved. Ideas to make Vim more useful?
+  Great, but unless you're bridging to another application, probably best just
+  to write a vim plugin. RSpec configuration? Different gem.
+
+* the tools are both local apps. I'm less wed to this one: it seems obvious
+  that there would be value in e.g. github+pivotal mashups. I'm just not sure
+  they belong on each dev's machine.
+
+Those granted, I'd love for Cadre to grow into a freewheeling toolkit of useful
+integrations.
