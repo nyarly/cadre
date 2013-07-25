@@ -9,6 +9,24 @@ Currently, it includes:
 * A vim quickfix formatter, so that you can jump through the backtraces of your rspec fails
 * A vim coverage indicator, so that you can see what code has coverage as you edit.
 
+### Getting started
+
+Add cadre to your working enviroment.  Either:
+
+    gem install cadre
+
+or add
+
+    gem 'cadre'
+
+to your Gemfile
+
+Run:
+
+   cadre how_to
+
+for the current explanation of how to set the thing up
+
 ### Nota Mucho Bene
 
 This thing has atrocious tests. As in: none at all. The way RSpec and Simplecov
