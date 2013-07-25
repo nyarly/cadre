@@ -61,7 +61,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency("thor", "~> 0.18.1")
   spec.add_dependency("tilt", "~> 1.4.1")
-  spec.add_dependency("valise", "~> 0.9")
+  spec.add_dependency("valise", "~> 1.0")
 
   #spec.post_install_message = "Thanks for installing my gem!"
 end

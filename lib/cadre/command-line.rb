@@ -18,6 +18,9 @@ module Cadre
       Yeah, that's three commands, and you have to do the redirects yourself,
       but you can review the output before making it live, and put them
       somewhere else if that's what you want.
+
+      Configuration (including tool config templates) is sourced from:
+       #{Valise.to_s("\n       ")}
       EOH
     end
 
