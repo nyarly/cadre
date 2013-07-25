@@ -23,7 +23,7 @@ to your Gemfile
 
 Run:
 
-   cadre how_to
+    cadre how_to
 
 for the current explanation of how to set the thing up
 
