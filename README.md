@@ -5,10 +5,9 @@ The goal of Cadre is to provide bridges between development tools to enhance the
 
 Currently, it includes:
 
-A libnotify RSpec formatter, so that long spec runs aren't completely wasted time.
-A vim quickfix formatter, so that you can jump through the backtraces of your rspec fails
-
-A vim coverage indicator, so that you can see what code has coverage as you edit.
+* A libnotify RSpec formatter, so that long spec runs aren't completely wasted time.
+* A vim quickfix formatter, so that you can jump through the backtraces of your rspec fails
+* A vim coverage indicator, so that you can see what code has coverage as you edit.
 
 ### Nota Mucho Bene
 
