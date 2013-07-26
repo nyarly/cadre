@@ -26,15 +26,14 @@ module Cadre
           notifier.transient = true
           notifier.summary = "Finished spec run"
           notifier.message = notify_message(duration, example_count, failure_count, pending_count)
-          notifier.sound = "failure" if failure_count > 0
         else
           notifier.summary = "Finished long spec run"
           notifier.message = notify_message(duration, example_count, failure_count, pending_count)
-          if failure_count > 0
-            notifier.sound = "failure"
-          else
-            notifier.sound = "success"
-          end
+        end
+        if failure_count > 0
+          notifier.sound = "failure"
+        else
+          notifier.sound = "success"
         end
         notifier.go
       end

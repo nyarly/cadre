@@ -12,7 +12,7 @@ module Cadre
       def go
         cmd = "notify-send #{options} \"#@summary\" \"#@message\""
         %x[#{cmd}]
-        %x[paplay #{Valise.find(["sounds", sound]).full_path}]
+        %x[paplay #{Valise.find(["sounds", sound]).full_path}] if String === sound
       end
 
       def options
