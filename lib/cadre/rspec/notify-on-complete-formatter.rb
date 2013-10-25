@@ -1,4 +1,5 @@
 require 'cadre/libnotify/notifier'
+require 'rspec/core/formatters/base_formatter'
 
 rspec_pid = Process.pid
 at_exit do

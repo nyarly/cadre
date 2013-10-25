@@ -33,9 +33,9 @@ Gem::Specification.new do |spec|
     lib/cadre/libnotify/notifier.rb
     lib/cadre/growl/notifier.rb
     lib/cadre/rspec.rb
-    lib/cadre/rspec/quickfix.rb
+    lib/cadre/rspec/quickfix-formatter.rb
     lib/cadre/rspec/notify-on-complete-formatter.rb
-    lib/cadre/rspec/true-feelings.rb
+    lib/cadre/rspec/true-feelings-formatter.rb
     lib/cadre/config.rb
     lib/cadre/command-line.rb
     lib/cadre/valise.rb

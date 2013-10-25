@@ -14,10 +14,12 @@ module Cadre
       #{command_name} vim_plugin > ~/.vim/plugin/cadre.vim
       #{command_name} rspec_config >> spec/spec_helper.rb
       #{command_name} simplecov_config >> .simplecov
+      echo errors.err >> .gitignore
+      echo .cadre >> .gitignore
 
-      Yeah, that's three commands, and you have to do the redirects yourself,
+      Yeah, that's five commands, and you have to do the redirects yourself,
       but you can review the output before making it live, and put them
-      somewhere else if that's what you want.
+      somewhere else if that's what you want. (I'm considering a single command for all of it...)
 
       Configuration (including tool config templates) is sourced from:
        #{Valise.to_s("\n       ")}

@@ -2,6 +2,11 @@ require 'cadre/rspec'
 
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
+  if config.formatters.empty?
+    config.add_formatter(:progress)
+    #but do consider:
+    #config.add_formatter(Cadre::RSpec::TrueFeelingsFormatter)
+  end
   config.add_formatter(Cadre::RSpec::NotifyOnCompleteFormatter)
   config.add_formatter(Cadre::RSpec::QuickfixFormatter)
 end
