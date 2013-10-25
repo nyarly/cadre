@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    cadre (0.0.3)
+    cadre (0.1.0)
       thor (~> 0.18.1)
       tilt (~> 1.0)
       valise (~> 1.0)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     chunky_png (1.2.8)
     compass (0.12.2)
