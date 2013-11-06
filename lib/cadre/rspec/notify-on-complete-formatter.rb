@@ -1,4 +1,4 @@
-require 'cadre/libnotify/notifier'
+require 'cadre/notifier'
 require 'rspec/core/formatters/base_formatter'
 
 rspec_pid = Process.pid
@@ -22,7 +22,8 @@ module Cadre
       end
 
       def dump_summary(duration, example_count, failure_count, pending_count)
-        notifier = Libnotify::Notifier.new
+        notifier = Cadre::Notifier.get.new
+
         if duration < 20
           notifier.transient = true
           notifier.summary = "Finished spec run"

@@ -1,25 +1,25 @@
+require 'cadre/notifier'
+
 module Cadre
   module Growl
-    #XXXX This isn't going to work at all as is. Lifted from other code, as #ok
-    #hints toward a working adapter
-    class Notifier
-      def close
-        super
-        summary = summary_line example_count, failure_count, pending_count
-        if failure_count > 0
-          growlnotify "--image ./autotest/fail.png -p Emergency -m '#{summary}' -t 'Spec failure detected'" #ok
-        elsif pending_count > 0
-          growlnotify "--image ./autotest/pending.png -p High -m '#{summary}' -t 'Pending spec(s) present'" #ok
-        else
-          growlnotify "--image ./autotest/pass.png -p 'Very Low' -m '#{summary}' -t 'All specs passed'" #ok
-        end
+    class Notifier < ::Cadre::Notifier
+      register :growl
+
+      def self.available?
+        #XXXX This isn't going to work at all as is. Lifted from other code, as #ok
+        #hints toward a working adapter
+        availables["growlnotify"]
+      end
+
+      def go
+#        growlnotify "--image ./autotest/fail.png -p Emergency -m '#{summary}' -t '#{message}'" #ok
+#        growlnotify "--image ./autotest/pending.png -p High -m '#{summary}' -t '#{message}'" #ok
+#        growlnotify "--image ./autotest/pass.png -p 'Very Low' -m '#{summary}' -t '#{message}'" #ok
+        growlnotify "-m '#{summary}' -t '#{message}'" #ok
       end
 
       def growlnotify str
-        system 'which growlnotify > /dev/null'
-        if $?.exitstatus == 0
-          system "growlnotify -n autotest #{str}"
-        end
+        system "growlnotify -n cadre #{str}"
       end
 
     end

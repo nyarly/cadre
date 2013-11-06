@@ -2,17 +2,22 @@ require 'cadre/valise'
 
 module Cadre
   module Libnotify
-    class Notifier
-      def initialize
-        yield self if block_given?
-      end
+    class Notifier < ::Cadre::Notifier
+      register :libnotify
 
-      attr_accessor :summary, :message, :sound, :expire_time, :app_name, :transient
+      def self.available?
+        return availables["notify-send"]
+      end
 
       def go
         cmd = "notify-send #{options} \"#@summary\" \"#@message\""
         %x[#{cmd}]
-        %x[paplay #{Valise.find(["sounds", sound]).full_path}] if String === sound
+
+        if available?("paplay")
+          %x[paplay #{Valise.find(["sounds", sound]).full_path}] if String === sound
+        elsif available?("aplay")
+          %x[aplay #{Valise.find(["sounds", sound]).full_path}] if String === sound
+        end
       end
 
       def options

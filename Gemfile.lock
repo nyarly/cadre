@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cadre (0.1.0)
+    cadre (0.2.0)
       thor (~> 0.18.1)
       tilt (~> 1.0)
       valise (~> 1.0)
@@ -9,18 +9,17 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    chunky_png (1.2.8)
+    chunky_png (1.2.9)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    corundum (0.0.26)
+    corundum (0.1.3)
       bundler
       compass (>= 0.12.1)
       mailfactory (~> 1.4.0)
-      mattock (>= 0.4.0)
+      mattock (~> 0.5.3)
       nokogiri
-      rake-rubygems (>= 0.2.0)
       rdoc
       rspec (>= 2.0)
       sass (>= 3.1)
@@ -32,33 +31,32 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 1.0)
-    json (1.8.0)
+    json (1.8.1)
     mailfactory (1.4.0)
       mime-types (>= 1.13.1)
-    mattock (0.4.1)
+    mattock (0.5.3)
+      rake (~> 10.0)
       tilt (> 0)
       valise (>= 0.9.1)
-    mime-types (1.23)
-    mini_portile (0.5.1)
-    multi_json (1.7.7)
+    mime-types (2.0)
+    mini_portile (0.5.2)
+    multi_json (1.8.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rake (10.1.0)
-    rake-rubygems (0.2.0)
-      rake (>= 0.8.7)
     rdoc (4.0.1)
       json (~> 1.4)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.4)
-    rspec-expectations (2.14.0)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-instafail (0.2.4)
-    rspec-mocks (2.14.1)
+    rspec-mocks (2.14.4)
     ruby-progressbar (1.1.1)
-    sass (3.2.9)
+    sass (3.2.12)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -66,7 +64,7 @@ GEM
     thor (0.18.1)
     tilt (1.4.1)
     valise (1.0.0)
-    yard (0.8.6.2)
+    yard (0.8.7.3)
 
 PLATFORMS
   ruby

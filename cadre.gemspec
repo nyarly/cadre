@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name		= "cadre"
-  spec.version		= "0.1.0"
+  spec.version		= "0.2.0"
   author_list = {
     "Judson Lester" => 'nyarly@gmail.com'
   }
@@ -39,6 +39,7 @@ Gem::Specification.new do |spec|
     lib/cadre/config.rb
     lib/cadre/command-line.rb
     lib/cadre/valise.rb
+    lib/cadre/notifier.rb
     lib/cadre/simplecov/vim-formatter.rb
     lib/cadre/simplecov.rb
     bin/cadre
