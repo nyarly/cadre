@@ -146,8 +146,8 @@ function! s:AutocommandUncov(sourced)
   endif
 endfunction
 
-command! -nargs=0 Cov call s:CoverageSigns(expand("%:p"))
-command! -nargs=0 Uncov call s:ClearCoverageSigns(expand("%:p"))
+command! -nargs=0 Cov call s:SetCoverageSigns(expand("%:p"))
+command! -nargs=0 Uncov call s:ClearCoverageSigns()
 
 augroup SimpleCov
   au!
