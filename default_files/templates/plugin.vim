@@ -5,7 +5,7 @@
 
 hi  HitSign     ctermfg=6      cterm=bold   gui=bold    guifg=Green
 hi  MissSign    ctermfg=Red    cterm=bold   gui=bold    guifg=Red
-hi  IgnoreSign  ctermfg=6      cterm=bold   gui=bold    guifg=Grey
+hi  IgnoredSign ctermfg=6      cterm=bold   gui=bold    guifg=Grey
 "
 sign  define  hit      linehl=HitLine      texthl=HitSign      text=✔
 sign  define  miss     linehl=MissLine     texthl=MissSign     text=✘
