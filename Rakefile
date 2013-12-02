@@ -7,13 +7,17 @@ module Corundum
   core = Core.new
 
   core.in_namespace do
-    sanity = GemspecSanity.new(core)
-    QuestionableContent.new(core) do |dbg|
-      dbg.words = %w{p debugger}
+    GemspecFiles.new(core) do |files|
+      files.extra_files = Rake::FileList["default_files/**/*"]
+    end
+    ["debug", "profanity", "ableism", "racism"].each do |type|
+      QuestionableContent.new(core) do |qc|
+        qc.type = type
+      end
     end
     rspec = RSpec.new(core)
     cov = SimpleCov.new(core, rspec) do |cov|
-      cov.threshold = 30 #Testing this thing is a huge pain - It's battletested ...
+      cov.threshold = 50 #Testing this thing is a huge pain - It's battletested ...
     end
 
     gem = GemBuilding.new(core)
