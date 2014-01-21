@@ -6,7 +6,7 @@ module Cadre::RSpec
       if @failed_examples.empty?
         super
       else
-        output.print fail_color("u")
+        output.print failure_color("u")
       end
     end
   end
