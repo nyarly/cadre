@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
     default_files/templates/coverage-results.vim.erb
     default_files/templates/simplecov-config
     default_files/templates/rspec-config
+    default_files/templates/rspec3-config
     lib/cadre/libnotify/notifier.rb
     lib/cadre/growl/notifier.rb
     lib/cadre/rspec.rb
