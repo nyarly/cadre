@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name		= "cadre"
    #{MAJOR: incompatible}.{MINOR added feature}.{PATCH bugfix}-{LABEL}
-  spec.version		= "0.2.3"
+  spec.version		= "0.3.0"
   author_list = {
     "Judson Lester" => 'nyarly@gmail.com'
   }
