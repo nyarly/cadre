@@ -3,6 +3,9 @@
 This is a set of tools for aiding development - to integrate testing and
 metrics with editors and notifications.
 
+### Coverage in editor
+![That's right: coverage while you edit](doc/vim-coverage.png)
+
 From the command line docs (`cadre how_to`):
 ```
 Try:

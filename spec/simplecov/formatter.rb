@@ -1,7 +1,8 @@
 require 'simplecov'
-require 'simplecov-vim/formatter'
+require 'file-sandbox'
+require 'cadre/simplecov/vim-formatter'
 
-describe SimpleCov::Formatter::VimFormatter do
+describe Cadre::SimpleCov::VimFormatter do
   include FileSandbox
 
   let :files do
@@ -20,7 +21,7 @@ describe SimpleCov::Formatter::VimFormatter do
   end
 
   let :formatter do
-    SimpleCov::Formatter::VimFormatter.new
+    described_class.new
   end
 
   it "should have an original result with absolute paths" do
@@ -31,13 +32,13 @@ describe SimpleCov::Formatter::VimFormatter do
 
   it "should produce a vimscript" do
     formatter.format(result)
-    File::exists?("coverage.vim").should be_true
+    File::exists?(".cadre/coverage.vim").should be_true
 
-
-    File::open("coverage.vim") do |scriptfile|
-      scriptfile.lines.grep(/(['"])pretend_file\1/).should_not == []
+    File::open(".cadre/coverage.vim") do |scriptfile|
+      lines = scriptfile.each_line
+      lines.grep(/(['"])pretend_file\1/).should_not == []
       scriptfile.rewind
-      scriptfile.lines.grep(%r[(['"])nested/pretend_file\1]).should_not == []
+      lines.grep(%r[(['"])nested/pretend_file\1]).should_not == []
     end
   end
 end

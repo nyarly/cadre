@@ -1,1 +1,3 @@
--P **.rb
+-P **/*.rb
+-I spec_help
+--require simplecov
