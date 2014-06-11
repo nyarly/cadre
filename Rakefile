@@ -17,7 +17,7 @@ module Corundum
     end
     rspec = RSpec.new(core)
     cov = SimpleCov.new(core, rspec) do |cov|
-      cov.threshold = 50 #Testing this thing is a huge pain - It's battletested ...
+      cov.threshold = 59 #Testing this thing is a huge pain - It's battletested ...
     end
 
     gem = GemBuilding.new(core)

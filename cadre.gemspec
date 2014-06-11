@@ -38,6 +38,10 @@ Gem::Specification.new do |spec|
     lib/cadre/rspec/quickfix-formatter.rb
     lib/cadre/rspec/notify-on-complete-formatter.rb
     lib/cadre/rspec/true-feelings-formatter.rb
+    lib/cadre/rspec3.rb
+    lib/cadre/rspec3/quickfix-formatter.rb
+    lib/cadre/rspec3/notify-on-complete-formatter.rb
+    lib/cadre/rspec3/true-feelings-formatter.rb
     lib/cadre/config.rb
     lib/cadre/command-line.rb
     lib/cadre/valise.rb
