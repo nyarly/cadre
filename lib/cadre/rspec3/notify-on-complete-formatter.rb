@@ -21,7 +21,7 @@ module Cadre
         "Total duration: #{duration}\n Total: #{example_count}\n Failed: #{failure_count}\n Pending: #{pending_count}\n\nFinished at #{Time.now}"
       end
 
-      RSpec::Core::Formatters.register self, :dump_summary
+      ::RSpec::Core::Formatters.register self, :dump_summary
 
       def initialize(output)
       end

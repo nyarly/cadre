@@ -1,8 +1,8 @@
 module Cadre::RSpec3
   class TrueFeelingsFormatter < RSpec::Core::Formatters::BaseFormatter
-    include RSpec::Core::Formatters::ConsoleCodes
+    include ::RSpec::Core::Formatters::ConsoleCodes
 
-    RSpec::Core::Formatters.register self, :example_passed, :example_failed
+    ::RSpec::Core::Formatters.register self, :example_passed, :example_failed
 
     def initialize(output)
       super

@@ -15,7 +15,7 @@ module Cadre
       end
       attr_reader :output, :config
 
-      RSpec::Core::Formatters.register self, :example_failed, :example_pending
+      ::RSpec::Core::Formatters.register self, :example_failed, :example_pending
 
       def example_failed(notification)
         example = notification.example
