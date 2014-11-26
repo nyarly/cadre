@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name		= "cadre"
    #{MAJOR: incompatible}.{MINOR added feature}.{PATCH bugfix}-{LABEL}
-  spec.version		= "1.0.0"
+  spec.version		= "1.0.1"
   author_list = {
     "Judson Lester" => 'nyarly@gmail.com'
   }
@@ -66,7 +66,7 @@ Gem::Specification.new do |spec|
   spec.rdoc_options	+= %w{--main doc/README }
   spec.rdoc_options	+= ["--title", "#{spec.name}-#{spec.version} Documentation"]
 
-  spec.add_dependency("thor", ">= 0.18.1", "< 1.0")
+  spec.add_dependency("thor", ">= 0.14", "< 1.0")
   spec.add_dependency("tilt", "> 1.0")
   spec.add_dependency("valise", "~> 1.1.2")
 
