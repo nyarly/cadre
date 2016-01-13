@@ -1,5 +1,6 @@
 require 'cadre/rspec'
-require 'cadre/simplecov'
+load 'cadre/simplecov.rb'
+load 'cadre/simplecov/vim-formatter.rb'
 require 'cadre/command-line'
 require 'cadre/growl/notifier'
 
