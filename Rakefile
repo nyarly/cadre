@@ -22,17 +22,10 @@ module Corundum
 
     gem = GemBuilding.new(core)
     cutter = GemCutter.new(core,gem)
-    email = Email.new(core)
     vc = Git.new(core) do |vc|
       vc.branch = "master"
     end
-
-    yd = YARDoc.new(core)
-
-    docs = DocumentationAssembly.new(core, yd, rspec, cov)
-
-    pages = GithubPages.new(docs)
   end
 end
 
-task :default => [:release, :publish_docs]
+task :default => [:release]
