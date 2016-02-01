@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cadre (1.0.2)
+    cadre (1.0.3)
       thor (>= 0.14, < 1.0)
       tilt (> 1.0)
       valise (~> 1.1)
