@@ -15,19 +15,22 @@ module Cadre
       end
       attr_reader :output, :config
 
-      ::RSpec::Core::Formatters.register self, :example_failed, :example_pending
+      ::RSpec::Core::Formatters.register self, :example_failed, :example_pending, :stop
 
       def example_failed(notification)
         example = notification.example
 
         exception = example.execution_result.exception
-        paths = exception.backtrace.map do |frame|
-          format_caller frame
-        end.compact
-        paths = paths[0..config.backtrace_limit]
-        message = "#{example.full_description}: #{format_message exception.message}"
-        paths.each do |path|
-          output.puts "#{path}: [FAIL] #{message}"
+        exceptions = exception.respond_to?(:all_exceptions)  ? exception.all_exceptions : [exception]
+        exceptions.each do |exception|
+          paths = exception.backtrace.map do |frame|
+            format_caller frame
+          end.compact[0..config.backtrace_limit]
+
+          message = "#{example.full_description}: #{format_message exception.message}"
+          paths.each do |path|
+            output.puts "#{path}: [FAIL] #{message}"
+          end
         end
       end
 
@@ -45,6 +48,10 @@ module Cadre
         @example_count = example_count
         @failure_count = failure_count
         @pending_count = pending_count
+      end
+
+      def stop(notification)
+        @output.close
       end
 
       private
