@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name		= "cadre"
    #{MAJOR: incompatible}.{MINOR added feature}.{PATCH bugfix}-{LABEL}
-  spec.version		= "1.0.3"
+  spec.version		= "1.0.4"
   author_list = {
     "Judson Lester" => 'nyarly@gmail.com'
   }
@@ -68,7 +68,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency("thor", ">= 0.14", "< 1.0")
   spec.add_dependency("tilt", "> 1.0")
-  spec.add_dependency("valise", "~> 1.1")
+  spec.add_dependency("valise", "~> 1.2")
 
   #spec.post_install_message = "Thanks for installing my gem!"
 end
