@@ -34,6 +34,11 @@ module Cadre
     end
     alias quiet? quiet
 
+    def sound
+      !!value_or_fail("sound")
+    end
+    alias sound? sound
+
     def backtrace_pattern
       Regexp.new(value_or_fail('backtrace_pattern'))
     end
