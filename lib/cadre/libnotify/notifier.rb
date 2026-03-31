@@ -1,9 +1,14 @@
 require 'cadre/valise'
+require 'cadre/config'
 
 module Cadre
   module Libnotify
     class Notifier < ::Cadre::Notifier
       register :libnotify
+
+      def sound_enabled?
+        @sound_enabled ||= Config.new(Valise, "libnotify").sound?
+      end
 
       def self.available?
         return availables["notify-send"]
@@ -13,10 +18,13 @@ module Cadre
         cmd = "notify-send #{options} \"#@summary\" \"#@message\""
         %x[#{cmd}]
 
-        if available?("paplay")
-          %x[paplay #{Valise.find(["sounds", sound]).full_path}] if String === sound
-        elsif available?("aplay")
-          %x[aplay #{Valise.find(["sounds", sound]).full_path}] if String === sound
+        if sound_enabled? && String === sound
+          filename = Valise.find(["sounds", sound]).full_path
+          if available?("paplay")
+            %x[paplay #{filename}]
+          elsif available?("aplay")
+            %x[aplay #{filename}]
+          end
         end
       end
 

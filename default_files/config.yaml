@@ -1,5 +1,6 @@
 ---
 verbose: true
+sound: true
 quickfix:
   output_path: errors.err
   backtrace_pattern: '.*\.rb'
